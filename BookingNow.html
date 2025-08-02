@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link rel="stylesheet" href="style.css" />
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <!-- Bootstrap Icons CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+<body>
+    <header class="navbar navbar-expand-lg main-navbar">
+    <div class="container">
+        <div class="logo">
+            <img src="./Images/logo.png" alt="">
+            <strong>Alektra</strong>
+        </div>
+      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav gap-4">
+          <li class="nav-item"><a class="nav-link text-white" href="./index.html">Home</a></li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
+              Models
+            </a>
+            <ul class="dropdown-menu model-dropdown">
+              <li>
+                <div class="row g-4 px-3 py-2">
+                  <div class="col-6 col-md-3 text-center">
+                    <img src="./Images/car1.jpg" class="img-fluid" alt="Car 1" />
+                    <p class="car-name text-white">Model A</p>
+                  </div>
+                  <div class="col-6 col-md-3 text-center">
+                    <img src="./images/car2.jpg" class="img-fluid" alt="Car 2" />
+                    <p class="car-name text-white">Model B</p>
+                  </div>
+                  <div class="col-6 col-md-3 text-center">
+                    <img src="./images/car3.jpg" class="img-fluid" alt="Car 3" />
+                    <p class="car-name text-white">Model C</p>
+                  </div>
+                  <div class="col-6 col-md-3 text-center">
+                    <img src="./images/car1.jpg" class="img-fluid" alt="Car 4" />
+                    <p class="car-name text-white">Model D</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
+              Booking
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./BookingNow.html">Book Now</a></li>
+              <li><a class="dropdown-item" href="./TestDrive.html">Book Test Drive</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link text-white" href="./About.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="./Contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+<!-- booking hero section -->
+
+<section class="booking-hero-section d-flex align-items-center">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Left Empty for balance or future image -->
+      <div class="col-md-6 d-none d-md-block"></div>
+    </div>
+  </div>
+</section>
+
+<!-- Booking Form -->
+<section class="booking-form-section py-5">
+  <div class="container">
+    <h1>Book Your Haval Today!</h1>
+    <form class="booking-form">
+      <div class="row g-3">
+
+        <!-- Full Name -->
+        <div class="col-md-6">
+          <input type="text" class="form-control custom-field" placeholder="Full Name" />
+        </div>
+
+        <!-- Phone -->
+        <div class="col-md-6">
+          <input type="text" class="form-control custom-field" placeholder="Phone" />
+        </div>
+
+        <!-- Address -->
+        <div class="col-md-6">
+          <input type="text" class="form-control custom-field" placeholder="Address" />
+        </div>
+
+        <!-- City -->
+        <div class="col-md-6">
+          <input type="text" class="form-control custom-field" placeholder="City" />
+        </div>
+
+        <!-- Email -->
+        <div class="col-md-6">
+          <input type="email" class="form-control custom-field" placeholder="Email" />
+        </div>
+
+        <!-- CNIC -->
+        <div class="col-md-6">
+          <input type="text" class="form-control custom-field" placeholder="CNIC" />
+        </div>
+
+        <!-- NTN -->
+        <div class="col-md-6">
+          <input type="text" class="form-control custom-field" placeholder="NTN No" />
+        </div>
+
+        <!-- Dealer Dropdown -->
+        <div class="col-md-6">
+          <select class="form-select custom-field">
+            <option selected disabled>Select Dealer</option>
+            <option>Haval Lahore</option>
+            <option>Haval Karachi</option>
+            <option>Haval Islamabad</option>
+          </select>
+        </div>
+
+        <!-- Model Dropdown -->
+        <div class="col-md-6">
+          <select class="form-select custom-field">
+            <option selected disabled>Select Model</option>
+            <option>Haval H6</option>
+            <option>Haval H6 HEV</option>
+            <option>Haval Jolion</option>
+          </select>
+        </div>
+
+        <!-- Color Dropdown -->
+        <div class="col-md-6">
+          <select class="form-select custom-field">
+            <option selected disabled>Select a Color</option>
+            <option>Black</option>
+            <option>White</option>
+            <option>Red</option>
+            <option>Blue</option>
+          </select>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="col-12 col-md-6 mt-5">
+  <button type="submit" class="btn btn-danger px-5 py-2">Submit Booking</button>
+</div>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- footer -->
+
+    <footer class="footer py-4 mt-5">
+  <div class="container">
+    <div class="row gy-4 py-4">
+      <!-- Column 1: Logo & Description -->
+      <div class="col-lg-4 col-md-6">
+        <h5 class="text-uppercase">Haval Pakistan</h5>
+        <p>Your trusted destination for cutting-edge SUVs and outstanding automotive experience.</p>
+      </div>
+
+      <!-- Column 2: Quick Links -->
+      <div class="col-lg-2 col-md-6">
+        <h6 class="text-uppercase mb-3">Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Offers</a></li>
+          <li><a href="#">Dealers</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Vehicles -->
+      <div class="col-lg-3 col-md-6">
+        <h6 class="text-uppercase mb-3">Vehicles</h6>
+        <ul class="list-unstyled">
+          <li><a href="#">H6</a></li>
+          <li><a href="#">H6 HEV</a></li>
+          <li><a href="#">Jolion</a></li>
+          <li><a href="#">Jolion HEV</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Contact -->
+      <div class="col-lg-3 col-md-6">
+        <h6 class="text-uppercase mb-3">Contact Us</h6>
+        <p>Email: info@haval.pk</p>
+        <p>Phone: +92 300 1234567</p>
+        <p>Location: Lahore, Pakistan</p>
+        <div class="social-icons mt-2">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="my-4" />
+    <div class="text-center small">
+      &copy; 2025 Haval Pakistan. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+     <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

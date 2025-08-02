@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Haval Project</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Bootstrap CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+ <!-- Bootstrap Icons CDN -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <header class="navbar navbar-expand-lg main-navbar">
+    <div class="container">
+        <div class="logo">
+            <img src="./Images/logo.png" alt="">
+            <strong>Alektra</strong>
+        </div>
+      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span><i class="fas fa-bars"></i></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav gap-4">
+          <li class="nav-item"><a class="nav-link text-white" href="./index.html">Home</a></li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
+              Models
+            </a>
+            <ul class="dropdown-menu model-dropdown">
+              <li>
+                <div class="row g-4 px-3 py-2">
+                  <div class="col-6 col-md-3 text-center">
+                    <img src="./Images/car1.jpg" class="img-fluid" alt="Car 1" />
+                    <p class="car-name text-white">Model A</p>
+                  </div>
+                  <div class="col-6 col-md-3 text-center">
+                    <img src="./images/car2.jpg" class="img-fluid" alt="Car 2" />
+                    <p class="car-name text-white">Model B</p>
+                  </div>
+                  <div class="col-6 col-md-3 text-center">
+                    <img src="./images/car3.jpg" class="img-fluid" alt="Car 3" />
+                    <p class="car-name text-white">Model C</p>
+                  </div>
+                  <div class="col-6 col-md-3 text-center">
+                    <img src="./images/car1.jpg" class="img-fluid" alt="Car 4" />
+                    <p class="car-name text-white">Model D</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown">
+              Booking
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./BookingNow.html">Book Now</a></li>
+              <li><a class="dropdown-item" href="./TestDrive.html">Book Test Drive</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item"><a class="nav-link text-white" href="./About.html">About Us</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="./Contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Slider Section -->
+ <section id="hero-slider" class="hero-slider">
+    <div id="carouselHero" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000">
+      
+      <!-- Slides -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+         <div class="slide1"></div>
+          <!-- <div class="carousel-caption d-none d-md-block">
+            <h2>Luxury Awaits</h2>
+            <p>Explore the elegance</p>
+          </div> -->
+        </div>
+        <div class="carousel-item">
+          <img src="./images/car2.jpg" class="d-block w-100" alt="Slide 2">
+          <div class="carousel-caption d-none d-md-block">
+            <h2>Unmatched Performance</h2>
+            <p>Drive into the future</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="./images/car3.jpg" class="d-block w-100" alt="Slide 3">
+          <div class="carousel-caption d-none d-md-block">
+            <h2>Experience Excellence</h2>
+            <p>Your journey begins here</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselHero" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselHero" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </section>
+
+  <!-- offers section -->
+<section class="haveli-offers container py-5">
+  <h2 class="text-center heading-text">Haveli Offers</h2>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="offer-card position-relative overflow-hidden">
+        <img src="./images/car1.jpg" alt="Car 1" class="img-fluid card-img">
+        <div class="overlay">
+          <h6>Explore Haval Range</h6>
+          <div class="model-row d-flex justify-content-center flex-wrap gap-2">
+            <span>H6</span>
+            <span>H6 HEV</span>
+            <span>Jolion</span>
+            <span>Jolion HEV</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="offer-card position-relative overflow-hidden">
+        <img src="./images/car2.jpg" alt="Car 2" class="img-fluid card-img">
+        <div class="overlay">
+          <h6>Explore Haval Range</h6>
+          <div class="model-row d-flex justify-content-center flex-wrap gap-2">
+            <span>H6</span>
+            <span>H6 HEV</span>
+            <span>Jolion</span>
+            <span>Jolion HEV</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="offer-card position-relative overflow-hidden">
+        <img src="./images/car1.jpg" alt="Car 3" class="img-fluid card-img">
+        <div class="overlay">
+          <h6>Explore Haval Range</h6>
+          <div class="model-row d-flex justify-content-center flex-wrap gap-2">
+            <span>H6</span>
+            <span>H6 HEV</span>
+            <span>Jolion</span>
+            <span>Jolion HEV</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- video -->
+ <div class="container my-5">
+  <div class="car-video-section">
+    <div class="ratio ratio-16x9">
+      <video autoplay muted loop playsinline>
+        <source src="./Images/carvideo.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</div>
+
+<!-- what are here -->
+  <!-- Section -->
+<section class="why-here-section py-5" id="counter-section">
+  <div class="container">
+       <!-- Left Heading -->
+      <div class="col-md-6 text-md-start text-center mb-4 mb-md-0">
+        <h2 class="why-heading">Why We’re Here</h2>
+      </div>
+    <div class="row align-items-center mt-5">
+      <!-- Right Counters -->
+      <div class="col-md-12">
+        <div class="row text-center">
+
+          <!-- Counter 1 -->
+          <div class="col-sm-4 mb-4">
+            <h3 class="counter" data-target="100">0</h3>
+            <p class="title">Happy Customers</p>
+            <p class="desc">We take pride in providing exceptional service that meets the unique needs of every traveler.</p>
+          </div>
+
+          <!-- Counter 2 -->
+          <div class="col-sm-4 mb-4">
+            <h3 class="counter" data-target="90">0</h3>
+            <p class="title">Customer Satisfaction</p>
+            <p class="desc">Our commitment to excellent service keeps our customers coming back.</p>
+          </div>
+
+          <!-- Counter 3 -->
+          <div class="col-sm-4 mb-4">
+            <h3 class="counter">24/7</h3>
+            <p class="title">Roadside Assistance</p>
+            <p class="desc">Ensuring you’re never left stranded, no matter where your journey takes you.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+  <!-- Sticky Background Section -->
+  <section class="sticky-bg-section">
+   <div class="container">
+    <div class="row">
+      <div class="col-md-6"></div>
+
+    <div class="col-md-6">
+       <div class="text-box">
+      <h1>Whether it’s a weekend getaway or a business trip...</h1>
+      <p>Whether it's a weekend getaway or a business trip,
+        we have the right vehicle. Duis aute irure dolor in
+        reprehenderit in voluptate velit esse cillum dolore
+        eu fugiat nulla pariatur</p>
+    </div>
+    </div>
+   </div>
+       </div>
+  </section>
+
+<!-- details table -->
+ <!-- <section class="dealership-table py-5">
+  <div class="container">
+    <h2 class="text-center mb-4">Haval Dealerships</h2>
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover text-center">
+        <thead class="table-dark">
+          <tr>
+            <th>NO.</th>
+            <th>CITY</th>
+            <th>DEALERSHIP</th>
+            <th>ADDRESS</th>
+            <th>CONTACT</th>
+            <th>MAP</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Sargodha</td>
+            <td>HAVAL Sargodha</td>
+            <td>Lahore Road Sargodha</td>
+            <td>0330-6666222</td>
+            <td>
+              <a href="https://www.google.com/maps?q=Lahore+Road+Sargodha" target="_blank" class="btn btn-sm btn-outline-primary">View</a>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Karachi</td>
+            <td>Automotive Technologies</td>
+            <td>Emarah Suits, Plot AA/B-6, Block A, SMCHS, Opposite FTC, Shahrah e Faisal, Karachi</td>
+            <td>0330-1239369</td>
+            <td>
+              <a href="https://www.google.com/maps?q=Emarah+Suits,+SMCHS,+Karachi" target="_blank" class="btn btn-sm btn-outline-primary">View</a>
+            </td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>Karachi</td>
+            <td>Haval Yazdani</td>
+            <td>Sector 5 Korangi, Karachi, Pakistan</td>
+            <td>021-35050337</td>
+            <td>
+              <a href="https://www.google.com/maps?q=Sector+5+Korangi,+Karachi" target="_blank" class="btn btn-sm btn-outline-primary">View</a>
+            </td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>Karachi</td>
+            <td>Flagship Motors</td>
+            <td>Plot #3, Sector 27, Korangi Industrial Area, Korangi, Karachi</td>
+            <td>0317-3338322</td>
+            <td>
+              <a href="https://www.google.com/maps?q=Sector+27+Korangi+Industrial+Area,+Karachi" target="_blank" class="btn btn-sm btn-outline-primary">View</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section> -->
+
+<!-- servces cards -->
+<section class="services-section">
+  <h2 class="services-heading">We Offer Reliable Services</h2>
+
+  <div class="card-container">
+    <article class="c-card">
+      <header class="c-card__header">
+        <img src="./Images/car1.jpg" class="c-card__image" alt="Everywhere" />
+      </header>
+      <div class="c-card__body">
+        <h2 class="c-card__title">EVERYWHERE AND EVERYTIME</h2>
+        <p class="c-card__intro">Reliable service support wherever you are, whenever you need it.</p>
+      </div>
+    </article>
+
+    <article class="c-card">
+      <header class="c-card__header">
+        <img src="./Images/car2.jpg" class="c-card__image" alt="Parts" />
+      </header>
+      <div class="c-card__body">
+        <h2 class="c-card__title">PARTS</h2>
+        <p class="c-card__intro">Genuine parts to keep your vehicle in top condition.</p>
+      </div>
+    </article>
+
+    <article class="c-card">
+      <header class="c-card__header">
+        <img src="./Images/car3.jpg" class="c-card__image" alt="Service" />
+      </header>
+      <div class="c-card__body">
+        <h2 class="c-card__title">AFTER SALES / BOOK A SERVICE</h2>
+        <p class="c-card__intro">Hassle-free booking and expert after-sales assistance.</p>
+      </div>
+    </article>
+  </div>
+</section>
+
+<!-- end cards -->
+<!-- footer -->
+    <footer class="footer py-4 mt-5">
+  <div class="container">
+    <div class="row gy-4 py-4">
+      <!-- Column 1: Logo & Description -->
+      <div class="col-lg-4 col-md-6">
+        <h5 class="text-uppercase">Haval Pakistan</h5>
+        <p>Your trusted destination for cutting-edge SUVs and outstanding automotive experience.</p>
+      </div>
+
+      <!-- Column 2: Quick Links -->
+      <div class="col-lg-2 col-md-6">
+        <h6 class="text-uppercase mb-3">Quick Links</h6>
+        <ul class="list-unstyled">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Offers</a></li>
+          <li><a href="#">Dealers</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3: Vehicles -->
+      <div class="col-lg-3 col-md-6">
+        <h6 class="text-uppercase mb-3">Vehicles</h6>
+        <ul class="list-unstyled">
+          <li><a href="#">H6</a></li>
+          <li><a href="#">H6 HEV</a></li>
+          <li><a href="#">Jolion</a></li>
+          <li><a href="#">Jolion HEV</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 4: Contact -->
+      <div class="col-lg-3 col-md-6">
+        <h6 class="text-uppercase mb-3">Contact Us</h6>
+        <p>Email: info@haval.pk</p>
+        <p>Phone: +92 300 1234567</p>
+        <p>Location: Lahore, Pakistan</p>
+        <div class="social-icons mt-2">
+          <a href="#"><i class="bi bi-facebook"></i></a>
+          <a href="#"><i class="bi bi-instagram"></i></a>
+          <a href="#"><i class="bi bi-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="my-4" />
+    <div class="text-center small">
+      &copy; 2025 Haval Pakistan. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+  
