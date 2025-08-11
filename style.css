@@ -90,6 +90,11 @@ body {
 .hero-slider .carousel {
   height: 100vh;
 }
+@media (max-width: 768px) {
+  .hero-slider .carousel {
+    height: auto !important;
+  }
+}
 .hero-slider .carousel-inner {
   height: 100%;
 }
@@ -102,6 +107,14 @@ body {
   height: 100%;
   min-height: 450px;
 }
+@media (max-width: 768px) {
+  .hero-slider .carousel-inner .slide1 {
+    width: 100% !important;
+    height: auto !important;
+    background-position: top !important;
+    background-size: contain !important;
+  }
+}
 .hero-slider .carousel-inner .carousel-item {
   height: 100vh;
   position: relative;
@@ -112,6 +125,15 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
   filter: brightness(70%);
+}
+@media (max-width: 768px) {
+  .hero-slider .carousel-inner .carousel-item {
+    width: 100% !important;
+    height: 100% !important;
+    -o-object-fit: contain !important;
+       object-fit: contain !important;
+    max-height: 350px !important;
+  }
 }
 .hero-slider .carousel-inner .carousel-item .carousel-caption {
   bottom: 20%;
@@ -482,7 +504,7 @@ body {
 }
 @media (max-width: 767px) {
   .dream-car-section .dream-car-img {
-    margin-top: 40px;
+    margin-top: 0px !important;
   }
 }
 
@@ -620,7 +642,8 @@ body {
   font-weight: 600;
   margin-bottom: 10px;
   color: #d89e76;
-  text-align: justify;
+  text-align: left;
+  line-height: 30px;
 }
 .sazgar-section .card-box .overlay-content p {
   font-size: 0.95rem;
@@ -644,7 +667,7 @@ body {
     padding: 15px;
     background: rgba(0, 0, 0, 0.6);
     border-radius: 0 0 10px 10px;
-    margin-top: -20px;
+    margin-top: -145px;
     width: 100% !important;
   }
 }
@@ -719,8 +742,11 @@ body {
 }
 @media (max-width: 768px) {
   .booking-hero-section {
+    min-height: 350px;
+    width: 100%;
+    background-size: cover;
     height: auto;
-    padding: 60px 0;
+    background-position: center;
   }
   .booking-hero-section .booking-hero-text {
     text-align: center;
@@ -991,4 +1017,98 @@ body {
   height: 100%;
   border: none;
   display: block;
+}
+
+@media (max-width: 768px) {
+  .why-here-section .why-heading {
+    font-size: 30px !important;
+    text-align: justify !important;
+  }
+  .why-here-section .counter {
+    font-size: 30px !important;
+  }
+  .why-here-section .title {
+    font-size: 20px !important;
+  }
+  .sticky-bg-section {
+    width: 100% !important;
+    height: auto !important;
+    background-position: top !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+  }
+  .sticky-bg-section::before {
+    width: 100% !important;
+    max-height: 300px !important;
+  }
+  .sticky-bg-section .text-box h1 {
+    font-size: 30px !important;
+    text-align: left !important;
+  }
+  .services-heading {
+    font-size: 25px !important;
+  }
+  .booking-form-section h1 {
+    font-size: 30px !important;
+  }
+  .booking-test-drive {
+    width: 100% !important;
+    height: auto !important;
+    background-position: top !important;
+    background-repeat: no-repeat !important;
+    min-height: 350px !important;
+  }
+  .journey-heading {
+    font-size: 30px !important;
+    text-align: left !important;
+  }
+  .journey-description {
+    font-size: 15px !important;
+    text-align: left !important;
+  }
+  .text-content h2 {
+    font-size: 30px !important;
+    text-align: left !important;
+  }
+  .section-heading {
+    font-size: 35px !important;
+  }
+  .feature-box h5 {
+    font-size: 18px !important;
+  }
+  .feature-box p {
+    font-size: 13px !important;
+  }
+  .news-text h3 {
+    font-size: 20px !important;
+  }
+  .news-text p {
+    font-size: 14px !important;
+  }
+  .hero-section {
+    width: 100% !important;
+    height: 100% !important;
+    min-height: 350px !important;
+  }
+  .hero-title {
+    font-size: 30px !important;
+  }
+  .contact-section h3 {
+    font-size: 30px !important;
+  }
+  .form-check-label {
+    font-size: 13px !important;
+  }
+  .contact-info li i {
+    width: 44px !important;
+    height: 44px !important;
+  }
+  .contact-info li .icon {
+    color: white !important;
+    padding: 7px 10px !important;
+    font-size: 20px !important;
+  }
+  .contact-info {
+    padding: 0px 6px !important;
+  }
 }/*# sourceMappingURL=style.css.map */

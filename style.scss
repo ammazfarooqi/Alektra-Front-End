@@ -12,22 +12,25 @@ body {
   width: 100%;
   z-index: 1000;
   transition: background-color 0.4s ease;
-.logo{
-  display: flex;
-  gap: 5px;
-  align-items: center;
- img {
-    width: 48px;
-    height: 48px;
-    object-fit: contain;
-    border-radius: 60px;
+
+  .logo {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+
+    img {
+      width: 48px;
+      height: 48px;
+      object-fit: contain;
+      border-radius: 60px;
+    }
+
+    strong {
+      font-size: 20px;
+      font-weight: 900;
+    }
   }
-  strong{
-    font-size: 20px;
-    font-weight: 900;
-  }
-}
- 
+
 
   .nav-link {
     color: white !important;
@@ -39,7 +42,7 @@ body {
   }
 
   .dropdown-menu {
-    background:  linear-gradient(150deg, rgb(27, 38, 54) 0%, rgb(18, 34, 50) 1%, #1b2837 0%, rgb(25, 62, 119) 0%, rgb(14, 47, 79) 60%, rgb(34, 47, 59) 100%, rgb(27, 38, 54) 50%);
+    background: linear-gradient(150deg, rgb(27, 38, 54) 0%, rgb(18, 34, 50) 1%, #1b2837 0%, rgb(25, 62, 119) 0%, rgb(14, 47, 79) 60%, rgb(34, 47, 59) 100%, rgb(27, 38, 54) 50%);
     border: none;
     box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
     padding: 10px 0;
@@ -47,14 +50,15 @@ body {
     .model-dropdown {
       width: 100%;
       min-width: 530px;
-      background:  linear-gradient(150deg, rgb(27, 38, 54) 0%, rgb(18, 34, 50) 1%, #1b2837 0%, rgb(25, 62, 119) 0%, rgb(14, 47, 79) 60%, rgb(34, 47, 59) 100%, rgb(27, 38, 54) 50%);
+      background: linear-gradient(150deg, rgb(27, 38, 54) 0%, rgb(18, 34, 50) 1%, #1b2837 0%, rgb(25, 62, 119) 0%, rgb(14, 47, 79) 60%, rgb(34, 47, 59) 100%, rgb(27, 38, 54) 50%);
     }
 
     .dropdown-item {
       color: white;
 
       &:hover {
-        background: linear-gradient(150deg, rgb(27, 38, 54) 0%, rgb(18, 34, 50) 1%, #1b2837 0%, rgb(25, 62, 119) 0%, rgb(14, 47, 79) 60%, rgb(34, 47, 59) 100%, rgb(27, 38, 54) 50%); ;
+        background: linear-gradient(150deg, rgb(27, 38, 54) 0%, rgb(18, 34, 50) 1%, #1b2837 0%, rgb(25, 62, 119) 0%, rgb(14, 47, 79) 60%, rgb(34, 47, 59) 100%, rgb(27, 38, 54) 50%);
+        ;
         color: #ccc;
       }
     }
@@ -109,17 +113,34 @@ body {
     height: 100vh;
   }
 
+  @media (max-width: 768px) {
+    .carousel {
+      height: auto !important;
+    }
+  }
+
   .carousel-inner {
     height: 100%;
-.slide1{
-  background-image: url(./Images/alktra-banner-min.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  width: 100%;
-  height: 100%;
-  min-height: 450px;
-}
+
+    .slide1 {
+      background-image: url(./Images/alktra-banner-min.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: bottom;
+      width: 100%;
+      height: 100%;
+      min-height: 450px;
+    }
+
+    @media (max-width: 768px) {
+      .slide1 {
+        width: 100% !important;
+        height: auto !important;
+        background-position: top !important;
+        background-size: contain !important;
+      }
+    }
+
     .carousel-item {
       height: 100vh;
       position: relative;
@@ -129,6 +150,13 @@ body {
         height: 100%;
         object-fit: cover;
         filter: brightness(70%);
+      }
+
+      @media (max-width: 768px) {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important;
+        max-height: 350px !important;
       }
 
       .carousel-caption {
@@ -150,7 +178,8 @@ body {
 
   .carousel-control-prev-icon,
   .carousel-control-next-icon {
-    background-color: linear-gradient(150deg, rgb(27, 38, 54) 0%, rgb(18, 34, 50) 1%, #1b2837 0%, rgb(25, 62, 119) 0%, rgb(14, 47, 79) 60%, rgb(34, 47, 59) 100%, rgb(27, 38, 54) 50%);;
+    background-color: linear-gradient(150deg, rgb(27, 38, 54) 0%, rgb(18, 34, 50) 1%, #1b2837 0%, rgb(25, 62, 119) 0%, rgb(14, 47, 79) 60%, rgb(34, 47, 59) 100%, rgb(27, 38, 54) 50%);
+    ;
     padding: 20px;
     border-radius: 50%;
   }
@@ -254,51 +283,9 @@ body {
 }
 
 // details table 
-
-// .dealership-table {
-//   background-color: #f8f9fa;
-
-//   h2 {
-//     font-weight: 700;
-//     font-size: 38px;
-//     color: rgb(5, 21, 55);
-//   }
-
-//   table {
-//     border-radius: 8px;
-//     overflow: hidden;
-
-//     thead {
-//       background-color: rgb(5, 21, 55);
-//       color: white;
-//     }
-
-//     tbody tr {
-//       transition: background-color 0.3s ease;
-
-//       &:hover {
-//         background-color: #ffe5e5; // Light hover effect
-//       }
-
-//       td,
-//       th {
-//         vertical-align: middle;
-//         font-size: 15px;
-//         padding: 12px;
-//         text-align: justify;
-//       }
-
-//       a.btn {
-//         font-size: 13px;
-//         padding: 4px 10px;
-//       }
-//     }
-//   }
-// }
-
 // why are here
 .why-here-section {
- background-color: black;
+  background-color: black;
 
   .why-heading {
     font-weight: 700;
@@ -312,7 +299,7 @@ body {
     color: white;
     margin-bottom: 10px;
     transition: 0.3s ease;
-   text-align: justify;
+    text-align: justify;
   }
 
   .title {
@@ -333,8 +320,6 @@ body {
   }
 }
 
-
-
 // Sticky Background
 .sticky-bg-section {
   background-image: url('./Images/car2.jpg'); // your background
@@ -349,11 +334,9 @@ body {
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(
-      180deg,
-      rgba(1, 1, 1, 0.15) 2.05%,
-      rgba(14, 14, 14, 0.27) 58.92%
-    );
+    background: linear-gradient(180deg,
+        rgba(1, 1, 1, 0.15) 2.05%,
+        rgba(14, 14, 14, 0.27) 58.92%);
     z-index: 1;
   }
 
@@ -361,20 +344,21 @@ body {
     position: relative;
     z-index: 2; // to place text above overlay
     padding: 70px 0px;
-    h1{
+
+    h1 {
       font-size: 38px;
-      font-weight: 700;   
+      font-weight: 700;
     }
-    p{
+
+    p {
       font-size: 18px;
-  font-weight: 400;
-  text-align: justify;
-}
+      font-weight: 400;
+      text-align: justify;
+    }
   }
 }
 
 // services cards 
-
 @import url("https://fonts.googleapis.com/css?family=Amaranth:400,400italic,700italic,700");
 
 // Section Heading
@@ -528,7 +512,7 @@ body {
 // about page scss start here
 .journey-section {
   background-color: #f8f9fa; // light background
-padding: 50px 0px;
+  padding: 50px 0px;
 
   .journey-heading {
     font-size: 45px;
@@ -553,6 +537,7 @@ padding: 50px 0px;
     transform: translateX(-50px);
     opacity: 0;
   }
+
   100% {
     transform: translateX(0px);
     opacity: 1;
@@ -564,6 +549,7 @@ padding: 50px 0px;
     transform: translateX(50px);
     opacity: 0;
   }
+
   100% {
     transform: translateX(0px);
     opacity: 1;
@@ -620,10 +606,11 @@ padding: 50px 0px;
     height: auto;
 
     @media (max-width: 767px) {
-      margin-top: 40px;
+      margin-top: 0px !important;
     }
   }
 }
+
 // logo slider
 .logo-slider-section {
   background-color: #f8f9fa;
@@ -665,11 +652,11 @@ padding: 50px 0px;
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
 }
-
 
 // about card section
 .features-section {
@@ -786,7 +773,8 @@ padding: 50px 0px;
         font-weight: 600;
         margin-bottom: 10px;
         color: #d89e76;
-        text-align: justify;
+        text-align: left;
+        line-height: 30px;
       }
 
       p {
@@ -815,7 +803,7 @@ padding: 50px 0px;
         padding: 15px;
         background: rgba(0, 0, 0, 0.6);
         border-radius: 0 0 10px 10px;
-        margin-top: -20px;
+        margin-top: -145px;
         width: 100% !important;
       }
     }
@@ -823,7 +811,6 @@ padding: 50px 0px;
 }
 
 // news and event
-
 .news-events-section {
   background-color: #f8f9fa; // Light background for clean look
 
@@ -880,7 +867,6 @@ padding: 50px 0px;
 }
 
 // booking scss start hear
-
 .booking-hero-section {
   background: url('./Images/bookingbg.jpg') center/cover no-repeat;
   height: 70vh;
@@ -906,8 +892,11 @@ padding: 50px 0px;
   }
 
   @media (max-width: 768px) {
+    min-height: 350px;
+    width: 100%;
+    background-size: cover;
     height: auto;
-    padding: 60px 0;
+    background-position: center;
 
     .booking-hero-text {
       text-align: center;
@@ -954,7 +943,6 @@ padding: 50px 0px;
     }
   }
 }
-
 
 // test drive 
 
@@ -1109,7 +1097,8 @@ $input-border: #ced4da;
     font-weight: 600;
     letter-spacing: 1px;
   }
-  p{
+
+  p {
     font-size: 14px;
     font-weight: 400;
     text-align: justify;
@@ -1120,7 +1109,7 @@ $input-border: #ced4da;
 .contact-section {
 
   h3 {
-       font-weight: 700;
+    font-weight: 700;
     color: #111b21;
     font-size: 38px;
   }
@@ -1128,11 +1117,12 @@ $input-border: #ced4da;
   .custom-input {
     border-radius: 8px;
     transition: all 0.3s ease;
-        width: 100%;
+    width: 100%;
     max-width: 450px;
     height: 45px;
-        font-size: 14px;
+    font-size: 14px;
     font-weight: 400;
+
     &:focus {
       outline: none;
       box-shadow: none;
@@ -1142,9 +1132,11 @@ $input-border: #ced4da;
 
   .form-check-label {
     font-size: 0.9rem;
+
     a.privacy-link {
       color: black;
       text-decoration: underline;
+
       &:hover {
         color: #d89e76;
       }
@@ -1152,20 +1144,24 @@ $input-border: #ced4da;
   }
 
   .contact-info {
-     padding: 40px 0px 0px 50px;
+    padding: 40px 0px 0px 50px;
+
     li {
       i {
         min-width: 30px;
         min-width: 30px;
-    width: 50px;
-    height: 50px;
-    background: linear-gradient(150deg, rgb(27, 38, 54) 0%, rgb(18, 34, 50) 1%, #1b2837 0%, rgb(25, 62, 119) 0%, rgb(14, 47, 79) 60%, rgb(34, 47, 59) 100%, rgb(27, 38, 54) 50%);;
+        width: 50px;
+        height: 50px;
+        background: linear-gradient(150deg, rgb(27, 38, 54) 0%, rgb(18, 34, 50) 1%, #1b2837 0%, rgb(25, 62, 119) 0%, rgb(14, 47, 79) 60%, rgb(34, 47, 59) 100%, rgb(27, 38, 54) 50%);
+        ;
       }
-      .icon{
+
+      .icon {
         color: white;
-    padding: 7px 13px;
-    font-size: 22px;
+        padding: 7px 13px;
+        font-size: 22px;
       }
+
       strong {
         display: block;
         color: #373838;
@@ -1176,51 +1172,165 @@ $input-border: #ced4da;
   button {
     border-radius: 50px;
     font-weight: 500;
-    background: linear-gradient(150deg, rgb(27, 38, 54) 0%, rgb(18, 34, 50) 1%, #1b2837 0%, rgb(25, 62, 119) 0%, rgb(14, 47, 79) 60%, rgb(34, 47, 59) 100%, rgb(27, 38, 54) 50%);;
+    background: linear-gradient(150deg, rgb(27, 38, 54) 0%, rgb(18, 34, 50) 1%, #1b2837 0%, rgb(25, 62, 119) 0%, rgb(14, 47, 79) 60%, rgb(34, 47, 59) 100%, rgb(27, 38, 54) 50%);
+    ;
     border: none;
     transition: background 0.3s ease;
     color: white;
     max-width: 175px;
+
     &:hover {
       background-color: #373838;
     }
   }
+
   .map-toggle {
-  background-color: #f1f1f1;
+    background-color: #f1f1f1;
 
-  .toggle-map-btn {
-    font-weight: 500;
-    font-size: 1rem;
-    padding: 10px 25px;
-    border-radius: 30px;
-    transition: 0.3s;
-    i {
-      color: white
-    }
+    .toggle-map-btn {
+      font-weight: 500;
+      font-size: 1rem;
+      padding: 10px 25px;
+      border-radius: 30px;
+      transition: 0.3s;
 
-    &:hover {
-      background-color: white;
-      color:   white;
       i {
+        color: white
+      }
+
+      &:hover {
+        background-color: white;
         color: white;
+
+        i {
+          color: white;
+        }
       }
     }
   }
-}
 
-#mapContainer {
-  margin-top: -10px;
+  #mapContainer {
+    margin-top: -10px;
 
-  .map-wrapper {
-    width: 100%;
-    height: 400px;
-    iframe {
+    .map-wrapper {
       width: 100%;
-      height: 100%;
-      border: none;
-      display: block;
+      height: 400px;
+
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        display: block;
+      }
     }
   }
+
 }
 
+// responsiveness all apges start here
+
+@media (max-width: 768px) {
+  .why-here-section {
+    .why-heading {
+      font-size: 30px !important;
+      text-align: justify !important;
+    }
+
+    .counter {
+      font-size: 30px !important;
+    }
+
+    .title {
+      font-size: 20px !important;
+    }
+  }
+
+  .sticky-bg-section {
+    width: 100% !important;
+    height: auto !important;
+    background-position: top !important;
+    background-size: contain !important;
+    background-repeat: no-repeat !important;
+
+    &::before {
+      width: 100% !important;
+      max-height: 300px !important;
+
+    }
+
+    .text-box h1 {
+      font-size: 30px !important;
+      text-align: left !important;
+    }
+
+  }
+
+  .services-heading {
+    font-size: 25px !important;
+  }
+
+  .booking-form-section h1 {
+    font-size: 30px !important;
+  }
+
+  .booking-test-drive {
+    width: 100% !important;
+    height: auto !important;
+    background-position: top !important;
+    background-repeat: no-repeat !important;
+    min-height: 350px !important;
+  }
+  .journey-heading{
+ font-size: 30px !important;
+     text-align: left !important;
+  }
+  .journey-description{
+    font-size: 15px !important;
+    text-align: left !important;
+  }
+  .text-content h2{
+     font-size: 30px !important;
+     text-align: left !important;
+  }
+  .section-heading {
+        font-size: 35px !important;
+  }
+  .feature-box h5{
+    font-size: 18px !important;
+  }
+  .feature-box p{
+    font-size: 13px !important;
+  }
+  .news-text h3 {
+    font-size: 20px !important;
+  }
+  .news-text p{
+    font-size: 14px !important;
+  }
+  .hero-section{
+        width: 100% !important;
+    height: 100% !important;
+    min-height: 350px !important;
+  }
+  .hero-title{
+    font-size: 30px !important;
+  }
+  .contact-section h3 {
+        font-size: 30px !important;
+  }
+  .form-check-label{
+    font-size: 13px !important;
+  }
+  .contact-info li i{
+      width: 44px !important;
+    height: 44px !important;
+  }
+  .contact-info li .icon{
+        color: white !important;
+    padding: 7px 10px !important;
+    font-size: 20px !important;
+  }
+  .contact-info {
+    padding: 0px 6px !important;
+  }
 }
